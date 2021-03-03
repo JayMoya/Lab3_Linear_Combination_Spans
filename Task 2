@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+vectorA = np.array([2,3])
+vectorL = np.array([4,5])
+
+scalarJ = np.arange(-10,10,0.0125)
+scalarA = np.arange(-4,4,0.0125)
+scalarY = np.arange(-9, 9, 0.125)
+
+a1, a2 = np.meshgrid(scalarJ, scalarJ)
+a3, a4 = np.meshgrid(scalarA, scalarA)
+a5, a6 = np.meshgrid(scalarY, scalarY)
+
+spanScalarBx = a1 * vectorK[0] + a2 * vectorL[0]
+spanScalarBy = a1 * vectorK[1] + a2 *vectorL[1]
+plt.scatter(spanScalarBx, spanScalarBy, s=10, alpha = 0.75,
+            label = "SPAN 1" ,color = "black")
+
+spanScalarRx = a3 * vectorK[0] + a4 * vectorL[0]
+spanScalarRy = a3 * vectorK[1] + a4 * vectorL[1]
+plt.scatter(spanScalarRx, spanScalarRy, s=10, alpha = 0.75,
+            label = "SPAN 2", color = "red")
+
+spanScalarUx = a5 * vectorK[0] + a6 * vectorL[0]
+spanScalarUy = a5 * vectorK[0] + a6 * vectorL[0]
+plt.scatter(spanScalarUx, spanScalarUy, s=10 , alpha = 0.75,
+            label = "SPAN 2" , color = "yellow")
+
+
+plt.xlim(-100,100)
+plt.ylim(-100,100)
+plt.axhline(y=0, color='black')
+plt.axvline(x=0, color='black')
+plt.grid()
+plt.legend()
+plt.show()
