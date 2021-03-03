@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+vectorM = np.array([2,4])
+vectorO = np.array([6,8])
+
+scalarY = np.arange(-5,5,0.0125)
+scalarA= np.arange(-10,10,0.0125)
+
+plt.scatter(scalarB * vectorK[0], scalarB * vectorK[1],
+            label = "Scalar 1 * Vector 1",
+            color= 'orange')
+plt.scatter(scalarB * vectorL[0], scalarB * vectorL[1],
+            label = "Scalar 2 * Vector 2",
+            color = "blue")
+
+plt.xlim(-20,10)
+plt.ylim(-20,10)
+plt.axhline(y=0, color='black')
+plt.axvline(x=0, color='black')
+plt.grid()
+plt.legend()
+plt.show()
